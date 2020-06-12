@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .5s;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sff: 'DM Serif Text', serif;
+    --tff: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--sc);
+    color: var(--fc);
+}
+
+.dark{
+    --sc: #1A202C;
+    --fc: #E2E8F0;
+}
+
+.light{
+    --sc: #EEEEEE;
+    --fc: #1A202C;
+}
+
+#blue,
+#bblue{
+    --pc: #448AFF;
+}
+
+#teal,
+#bteal{
+    --pc: #008080;
+}
+
+#pink,
+#bpink{
+    --pc: #ED64A6;
+}
+
+#hotpink,
+#bhotpink{
+    --pc: #E91E63;
+}
+
+#purple,
+#bpurple{
+    --pc: #805AD5;
+}
+
+#violet,
+#bviolet{
+    --pc: #EE82EE;
+}
+
+#orange,
+#borange{
+    --pc: #ED8936;
+}
+
+#red,
+#bred{
+    --pc: #E53E3E;
+}
+
+#green,
+#bgreen{
+    --pc: #38A169;
+}
+
+#gray,
+#bgray{
+    --pc: #808080;
+}
+
+
+/* header begin */
+
+.header{
+    color: var(--fc);
+    background-color: var(--pc);
+}
+
+.container{
+    max-width: 100%;
+}
+
+.container-nav{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+}
+
+.branding{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.logo{
+    width: 2rem;
+    height: 2rem;
+}
+
+.logoname{
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    letter-spacing: .07rem;
+    font-family: var(--sff);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navitems{
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+    color: var(--fc);
+}
+
+.navitems:hover,
+.navitems:focus,
+.navitems:active{
+    color: var(--sc);
+}
+
+.navitems:active{
+    text-decoration: underline var(--sc);
+}
+
+
+/**** Colors Table Begin / Menu ****/
+
+.dd-div{
+    display: inline-block;
+    margin-top: auto;
+}
+
+.dd-button{
+    height: 30px;
+    width: 65px;
+    border: none;
+    border-radius: 15px;
+    background: var(--pc);
+    margin: 2.5px 5px;
+    color: var(--fc);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.dd-button:hover,
+.dd-button:focus,
+.dd-button:active{
+    background: var(--sc);
+}
+
+.colors-table {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--pc);
+    z-index: 1;
+    padding: 10px;
+    border: 2px solid var(--fc);
+    border-radius: 15px;
+    transform: translate3d(-50%, -170%, 0);
+}
+
+.dd-div:focus-within .colors-table{
+    visibility: visible;
+    transform: translate3d(-50%, 10%, 0);
+}
+
+.color{
+    height: 30px;
+    width: 65px;
+    border: 1.5px solid var(--sc);
+    border-radius: 15px;
+    background: var(--pc);
+    margin: 2.5px 5px;
+    color: var(--fc);
+    cursor: pointer;
+    outline: none;
+}
+
+.color:hover,
+.color:focus,
+.color:active{
+    color: var(--sc);
+    outline: none;
+}
+
+
+/**** Colors Table Finish ****/
+
+.dd-switch{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/**** Toggle Switch Begin ****/
+
+.switch {
+    position: relative;
+    width: 65px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+}
+.switch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.switch-label {
+    display: block;
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid var(--fc);/*#A0AEC0;*/
+    border-radius: 30px;
+}
+.switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.switch-inner:before,
+.switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 18px;
+    color: white;
+    box-sizing: border-box;
+}
+.switch-inner:before {
+    font-family: fontawesome;
+    content: "\f186";
+    padding-left: 10px;
+    background-color: #1A202C;
+    color: #FFFFFF;
+}
+.switch-inner:after {
+    font-family: fontawesome;
+    content: "\f185";
+    padding-right: 10px;
+    background-color: #FFFFFF;
+    color: #1A202C;
+    text-align: right;
+}
+.switch-switch {
+    display: block;
+    width: 22px;
+    margin: 6px;
+    background: var(--pc);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 31px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in 0s; 
+}
+.switch-checkbox:checked + .switch-label .switch-inner {
+    margin-left: 0;
+}
+.switch-checkbox:checked + .switch-label .switch-switch {
+    right: 0px; 
+}
+/**** Toggle Switch Finish ****/
+
+/* header finish */
+
+
+/* hero begin */
+
+.hero{
+    margin: 1rem auto;
+    padding: 10px 25px;
+}
+
+.i-am{
+    font-family: var(--sff);
+    color: var(--fc);
+    font-size: 2rem;
+}
+
+.typewrite{
+    text-decoration: none;
+    color: var(--pc);
+    font-size: 2.25rem;
+    /*text-decoration: underline var(--pc);*/
+}
+
+.hero-title-uline{
+    margin-top: .15rem;
+    height: .2rem;
+    width: 10.35rem;
+    background: var(--pc);
+    border-radius: .1rem;
+}
+
+.cont-hero-img{
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+.hero-img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cont-hero-text{
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.hero-text{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--fc)
+}
+
+.hero-btn{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--pc);
+    color: var(--fc);
+    margin-top: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.hero-btn:hover,
+.hero-btn:focus,
+.hero-btn:active{
+    color: var(--sc);
+}
+
+/* hero finish */
+
+
+
+.fullscr{
+    height: 300vh;
+}
+
+@media (min-width: 650px){
+    .container{
+        max-width: 650px;
+    }
+    
+    .container-nav{
+        flex-direction: row;
+    }
+    
+    .branding{
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+    }
+    
+    .navbar{
+        padding-left: 1rem;
+        padding-bottom: .25rem;
+        padding-top: .25rem;
+        border-left: 1.5px solid var(--sc);
+    }
+    
+    .dd-switch{
+        margin-top: auto;
+        margin-left: auto;
+    }
+    
+    .hero-title{
+        margin-bottom: 1rem;
+    }
+    
+    .cont-hero-img{
+        margin: 0 0 0 auto;
+        max-width: 50%;
+    }
+
+    .hero-img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cont-hero-text{
+        max-width: 50%;
+        margin: -12rem auto 0 0;
+        text-align: left;
+    }
+
+    .hero-text{
+        margin: 0;
+        text-align: left;
+    }
+    
+    .hero-btn{
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 992px;
+    }
+}
