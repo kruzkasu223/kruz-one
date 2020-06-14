@@ -1,17 +1,43 @@
 
-// Checkbox cache saving
+
+// Theme Toggler
+
+
+(function() {
+    var themeSwitch = document.getElementById('myswitch');
+    if(themeSwitch) {
+        initTheme();
+        
+        themeSwitch.addEventListener("change", function(event){
+            resetTheme();
+        });
+
+        function initTheme() {
+            var lightThemeSelected = (localStorage.getItem("themeSwitch") !== null && localStorage.getItem("themeSwitch") === "light");
+            
+            themeSwitch.checked = lightThemeSelected;
+            
+                lightThemeSelected ? document.body.setAttribute("class", "light") : document.body.setAttribute("class", "dark");
+        };
+    
+        function resetTheme() {
+            if(themeSwitch.checked) {
+                document.body.setAttribute("class", "light");
+                localStorage.setItem("themeSwitch", "light");
+            }
+            else {
+                document.body.setAttribute("class", "dark");
+                localStorage.removeItem("themeSwitch");
+            } 
+        };
+    }
+}());
 
 
 
 
+// Primary Color Changer
 
-// Theme cache saving
-
-
-
-
-
-// Color cache saving
 
 const color = localStorage.getItem("color");
 
@@ -22,15 +48,6 @@ if (color) {
 
 
 
-// Theme Toggler
-
-$("#myswitch").click(function() {
-    $("body").toggleClass("light");
-});
-
-
-
-// Color Changer
 
 $("#bblue").click(function() {
     $("body").attr("id", "blue");
@@ -94,7 +111,9 @@ $("#bgray").click(function() {
 
 
 
+
 // Typewriter Animation
+
 
 const TypeWriter = function(txtElement, words, wait = 1000) {
     this.txtElement = txtElement;
@@ -150,7 +169,9 @@ function init() {
 
 
 
+
 // Sticky Navbar
+
 
 $(function() {
    $(window).scroll(function () {
@@ -165,6 +186,7 @@ $(function() {
             }
     });
 });
+
 
 
 
