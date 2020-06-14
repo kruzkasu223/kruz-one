@@ -340,11 +340,8 @@ body{
 }
 
 .typewriter{
-    text-align: center;
-    margin: 0 auto;
     color: var(--pc);
     font-size: 2.25rem;
-    line-height: 2.4rem;
     text-decoration: underline;
 }
 
