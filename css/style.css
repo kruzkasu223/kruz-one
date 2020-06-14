@@ -280,17 +280,17 @@ body{
 }
 .switch-inner:before {
     font-family: fontawesome;
-    content: "\f186";
+    content: "\f185";
     padding-left: 10px;
-    background-color: #1A202C;
-    color: #FFFFFF;
+    background-color: #EEEEEE;
+    color: #1A202C;
 }
 .switch-inner:after {
     font-family: fontawesome;
-    content: "\f185";
+    content: "\f186";
     padding-right: 10px;
-    background-color: #FFFFFF;
-    color: #1A202C;
+    background-color: #1A202C;
+    color: #EEEEEE;
     text-align: right;
 }
 .switch-switch {
