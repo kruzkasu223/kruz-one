@@ -1,4 +1,27 @@
 
+// Checkbox cache saving
+
+
+
+
+
+// Theme cache saving
+
+
+
+
+
+// Color cache saving
+
+const color = localStorage.getItem("color");
+
+if (color) {
+    $("body").attr("id", color);
+    $(".hero-img").attr("src", "img/hero-"+color+".png");
+}
+
+
+
 // Theme Toggler
 
 $("#myswitch").click(function() {
@@ -12,51 +35,61 @@ $("#myswitch").click(function() {
 $("#bblue").click(function() {
     $("body").attr("id", "blue");
     $(".hero-img").attr("src", "img/hero-blue.png");
+    localStorage.setItem("color", "blue");
 });
 
 $("#bteal").click(function() {
     $("body").attr("id", "teal");
     $(".hero-img").attr("src", "img/hero-teal.png");
+    localStorage.setItem("color", "teal");
 });
 
 $("#bpink").click(function() {
     $("body").attr("id", "pink");
     $(".hero-img").attr("src", "img/hero-pink.png");
+    localStorage.setItem("color", "pink");
 });
 
 $("#bhotpink").click(function() {
     $("body").attr("id", "hotpink");
     $(".hero-img").attr("src", "img/hero-hotpink.png");
+    localStorage.setItem("color", "hotpink");
 });
 
 $("#bpurple").click(function() {
     $("body").attr("id", "purple");
     $(".hero-img").attr("src", "img/hero-purple.png");
+    localStorage.setItem("color", "purple");
 });
 
 $("#bviolet").click(function() {
     $("body").attr("id", "violet");
     $(".hero-img").attr("src", "img/hero-violet.png");
+    localStorage.setItem("color", "violet");
 });
 
 $("#borange").click(function() {
     $("body").attr("id", "orange");
     $(".hero-img").attr("src", "img/hero-orange.png");
+    localStorage.setItem("color", "orange");
 });
 
 $("#bred").click(function() {
     $("body").attr("id", "red");
     $(".hero-img").attr("src", "img/hero-red.png");
+    localStorage.setItem("color", "red");
 });
 
 $("#bgreen").click(function() {
     $("body").attr("id", "green");
     $(".hero-img").attr("src", "img/hero-green.png");
+    localStorage.setItem("color", "green");
 });
 
 $("#bgray").click(function() {
     $("body").attr("id", "gray");
     $(".hero-img").attr("src", "img/hero-gray.png");
+    localStorage.setItem("color", "gray");
 });
 
 
