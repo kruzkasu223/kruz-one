@@ -612,7 +612,7 @@ body{
 }
 
 .port-btn-visit:hover,
-.port-btn-visit:focus,{
+.port-btn-visit:focus{
     color: var(--sc);
     background: var(--fc);
 }
@@ -635,7 +635,7 @@ body{
 }
 
 .port-btn-visit-gh:hover,
-.port-btn-visit-gh:focus,{
+.port-btn-visit-gh:focus{
     color: var(--fc);
     background: var(--pc);
 }
