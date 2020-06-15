@@ -124,6 +124,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -383,7 +384,7 @@ body{
 .hero-text{
     width: 90%;
     font-size: 1.25rem;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     text-align: justify;
     color: var(--fc);
 }
@@ -391,20 +392,23 @@ body{
 .hero-btn{
     height: 40px;
     width: 70%;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border-radius: .25rem;
     font-size: 1rem;
     font-weight: 500;
     background: var(--pc);
     color: var(--fc);
+    margin: 0 auto;
     margin-top: 1rem;
     cursor: pointer;
     outline: none;
 }
 
 .hero-btn:hover,
-.hero-btn:focus,
-.hero-btn:active{
+.hero-btn:focus{
     color: var(--sc);
     background: var(--fc);
 }
@@ -418,8 +422,8 @@ body{
 
 
 .skills{
-    margin: 0 auto;
-    padding: 3rem 1rem 1rem;
+    margin: 1rem auto;
+    padding: 3rem 1rem 1rem 1rem;
     
 }
 
@@ -503,6 +507,148 @@ body{
 
 
 
+/** Portfolio Begin **/
+
+
+.portfolio{
+    margin: 1rem auto;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+.port-title{
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--pc);
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.port-title-portfolio{
+    margin: 0 auto;
+}
+
+.cont-portfolio{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto 2rem;
+    padding: 2rem;
+    border: 2px solid var(--pc);
+    border-radius: .5rem;
+}
+
+.port-img{
+    width: 100%;
+    height: 40%;
+    border: 1px solid var(--pc);
+    border-radius: 2px;
+}
+
+.port-img-img{
+    width: 100%;
+    height: 100%;
+    filter: blur(1px) brightness(.8);
+}
+
+.port-name{
+    max-width: 100%;
+    max-height: 20%;
+    font-family: var(--sff);
+    color: var(--fc);
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.port-des{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+.port-des-p{
+    width: 100%;
+    text-align: justify;
+    color: var(--fc);
+}
+
+.port-btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.port-btn-visit{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .25rem 0;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--pc);
+    color: var(--fc);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
+}
+
+.port-btn-visit:hover,
+.port-btn-visit:focus,{
+    color: var(--sc);
+    background: var(--fc);
+}
+
+.port-btn-visit-gh{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .25rem 0;
+    border-radius: .25rem;
+    font-size: 1.25rem;
+    background: var(--fc);
+    color: var(--sc);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.port-btn-visit-gh:hover,
+.port-btn-visit-gh:focus,{
+    color: var(--fc);
+    background: var(--pc);
+}
+
+
+
+
+
+
+/** Portfolio Finish **/
+
+
+
 /** Other Functions Begin **/
 
 
@@ -530,7 +676,6 @@ body{
 
 
 
-.fullscr2,
 .fullscr3{
     height: 150vh;
 }
@@ -542,9 +687,9 @@ body{
 
 /** Media Queries **/
 
-@media (min-width: 680px){
+@media (min-width: 700px){
     .container{
-        max-width: 655px;
+        max-width: 90%;
     }
     
     .container-nav{
@@ -594,21 +739,8 @@ body{
     
 }
 
-@media (min-width: 780px){
+@media (min-width: 1400px){
     .container{
-        max-width: 755px;
+        max-width: 1260px;
     }
 }
-
-@media (min-width: 1000px){
-    .container{
-        max-width: 975px;
-    }
-}
-
-@media (min-width: 1200px){
-    .container{
-        max-width: 1175px;
-    }
-}
-
