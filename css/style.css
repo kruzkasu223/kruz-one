@@ -25,16 +25,6 @@ body{
     --fc: #1A202C;
 }
 
-#blue,
-#bblue{
-    --pc: #448AFF;
-}
-
-#teal,
-#bteal{
-    --pc: #008080;
-}
-
 #pink,
 #bpink{
     --pc: #ED64A6;
@@ -55,6 +45,16 @@ body{
     --pc: #EE82EE;
 }
 
+#blue,
+#bblue{
+    --pc: #448AFF;
+}
+
+#gray,
+#bgray{
+    --pc: #808080;
+}
+
 #orange,
 #borange{
     --pc: #ED8936;
@@ -70,10 +70,11 @@ body{
     --pc: #38A169;
 }
 
-#gray,
-#bgray{
-    --pc: #808080;
+#teal,
+#bteal{
+    --pc: #008080;
 }
+
 
 
 /** Header Begin **/
@@ -405,6 +406,7 @@ body{
 .hero-btn:focus,
 .hero-btn:active{
     color: var(--sc);
+    background: var(--fc);
 }
 
 
