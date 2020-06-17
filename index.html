@@ -272,7 +272,45 @@
         <!-- Contact begin -->
         
         
-        
+        <div class="container contact-me" id="contact-me">
+            
+            <div class="cont-title"><p class="cont-title-contact-me">Contact Me</p></div>
+            
+            <div class="cont-contact">
+                
+                <form class="contact-form" id="contact-form" autocomplete="off" name="Contact" method="POST" data-netlify="true" novalidate>
+                    
+                    <div class="contact-item cont-name">
+                        <input type="text" name="Name" class="cont-input" id="contact-name" required>
+                        <span class="error-msg" id="name-error-message"></span>
+                        <label for="name" class="cont-label" id="name-label">Name</label>
+                    </div>
+                    
+                    <div class="contact-item cont-email">
+                        <input type="text" name="E-mail" class="cont-input" id="contact-email" required>
+                        <span class="error-msg" id="email-error-message"></span>
+                        <label for="email" class="cont-label" id="email-label">E-mail</label>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <textarea name="Message" id="contact-msg" class="cont-input cont-msg" required></textarea>
+                        <span class="error-msg" id="msg-error-message"></span>
+                        <label for="message" class="cont-label cont-msg-label" id="msg-label">Message</label>
+                    </div>
+                    
+                    <div class="captcha" data-netlify-recaptcha="true">
+                    </div>
+                    
+                    <div class="contact-item cont-btn">
+                        <div class="captcha" data-netlify-recaptcha="true"></div>
+                        <span class="error-msg-submit" id="submit-error-message"></span>
+                        <input type="submit" name="Submit" class="cont-submit" id="contact-submit" value="Submit">
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
         
         
         <!-- Contact finish -->
@@ -292,15 +330,8 @@
         <!-- Other Functions -->
         
         
-        
-        
-        
-        <div class="container fullscr3" id="contact-me"></div>
-        
-        
-        
-        
         <button type="button" class="back-to-top"><a href="#"><i class="fa fa-arrow-circle-up"></i></a></button>
+        
         
     </body>
 </html>
