@@ -48,7 +48,6 @@ if (color) {
 
 
 
-
 $("#bblue").click(function() {
     $("body").attr("id", "blue");
     $(".hero-img").attr("src", "img/hero-blue.png");
@@ -178,7 +177,6 @@ $(function() {
         if ($(this).scrollTop() > 55) {
             $("nav").attr("class", "navbar-fixed");
             $("#nav-space").attr("class", "nav-space");
-            
         }
         else {
             $("nav").attr("class", "navbar");
@@ -228,6 +226,7 @@ $(".skill-per").each(function(){
 
 
 // Contact Form
+
 
 $(function() {
     
