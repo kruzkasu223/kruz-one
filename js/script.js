@@ -304,7 +304,7 @@ $(function() {
         var msg_length = $("#contact-msg").val().length;
         var msg = $("#contact-msg").val();
         
-        if (msg_length > 25) {
+        if (msg_length > 40) {
             $("#msg-error-message").hide();
             $("#contact-msg").css("border","2px solid var(--pc)");
         }
@@ -315,7 +315,7 @@ $(function() {
             error_msg = true;
         }
         else{
-            $("#msg-error-message").html("Enter Atleast 25 Character.");
+            $("#msg-error-message").html("Enter Atleast 40 Character.");
             $("#msg-error-message").show();
             $("#contact-msg").css("border","2px solid red");
             error_msg = true;
