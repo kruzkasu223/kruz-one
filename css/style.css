@@ -789,6 +789,7 @@ body{
 
 
 .footer{
+    margin-top: 2rem;
     color: var(--fc);
     background-color: var(--pc);
 }
