@@ -15,6 +15,8 @@ body{
     color: var(--fc);
 }
 
+
+
 .dark{
     --sc: #1A202C;
     --fc: #E2E8F0;
@@ -77,15 +79,18 @@ body{
 
 
 
+.container{
+    max-width: 100%;
+}
+
+
+
 /** Header Begin **/
+
 
 .header{
     color: var(--fc);
     background-color: var(--pc);
-}
-
-.container{
-    max-width: 100%;
 }
 
 .container-nav{
@@ -165,8 +170,7 @@ body{
     text-decoration: underline var(--sc);
 }
 
-
-/**** Colors Table Begin ****/
+/* Colors Table Begin */
 
 .dd-div{
     display: inline-block;
@@ -229,8 +233,7 @@ body{
     outline: none;
 }
 
-
-/**** Colors Table Finish ****/
+/* Colors Table Finish */
 
 .dd-switch{
     width: 150px;
@@ -240,7 +243,7 @@ body{
     margin-top: 1rem;
 }
 
-/**** Toggle Switch Begin ****/
+/* Toggle Switch Begin */
 
 .switch {
     position: relative;
@@ -249,11 +252,13 @@ body{
     -moz-user-select:none;
     -ms-user-select: none;
 }
+
 .switch-checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
+
 .switch-label {
     display: block;
     overflow: hidden; 
@@ -261,12 +266,14 @@ body{
     border: 2px solid var(--fc);
     border-radius: 30px;
 }
+
 .switch-inner {
     display: block;
     width: 200%;
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
+
 .switch-inner:before,
 .switch-inner:after {
     display: block;
@@ -279,6 +286,7 @@ body{
     color: white;
     box-sizing: border-box;
 }
+
 .switch-inner:before {
     font-family: fontawesome;
     content: "\f185";
@@ -286,6 +294,7 @@ body{
     background-color: #EEEEEE;
     color: #1A202C;
 }
+
 .switch-inner:after {
     font-family: fontawesome;
     content: "\f186";
@@ -294,6 +303,7 @@ body{
     color: #EEEEEE;
     text-align: right;
 }
+
 .switch-switch {
     display: block;
     width: 22px;
@@ -306,19 +316,24 @@ body{
     border-radius: 30px;
     transition: all 0.3s ease-in 0s; 
 }
+
 .switch-checkbox:checked + .switch-label .switch-inner {
     margin-left: 0;
 }
+
 .switch-checkbox:checked + .switch-label .switch-switch {
     right: 0px; 
 }
-/**** Toggle Switch Finish ****/
+
+/* Toggle Switch Finish */
+
 
 /** Header Finish **/
 
 
 
 /** Hero Begin **/
+
 
 .hero{
     margin: 0 auto;
@@ -502,6 +517,7 @@ body{
     transform: translateX(50%) rotate(45deg);
     border-radius: .125rem;
 }
+
 
 /** Skills Finish **/
 
@@ -765,10 +781,84 @@ body{
 }
 
 
-
-
-
 /** Contact Finish **/
+
+
+
+/** Footer Begin **/
+
+
+.footer{
+    color: var(--fc);
+    background-color: var(--pc);
+}
+
+.container-footer{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+}
+
+.branding-footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-footer{
+    width: 2rem;
+    height: 2rem;
+}
+
+.logoname-footer{
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    letter-spacing: .07rem;
+    font-family: var(--sff);
+}
+
+.contact-social{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cont-icon{
+    margin: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--fc);
+    cursor: pointer;
+}
+
+.cont-icon:hover,
+.cont-icon:focus{
+    color: var(--sc);
+}
+
+.credits{
+    font-size: 1.1rem;
+    font-family: var(--sff);
+    font-weight: 500;
+    color: var(--fc);
+}
+
+.fa-heart{
+    color: red;
+}
+
+
+/** Footer Finish **/
 
 
 
@@ -795,8 +885,6 @@ body{
     font-size: 2.5rem;
     color: var(--fc);
 }
-
-
 
 
 /** Other Functions Finish **/
@@ -854,6 +942,20 @@ body{
         width: 10px;
     }
     
+    .container-footer{
+        flex-direction: row;
+    }
+    
+    .contact-social{
+        margin-left: auto;
+        order: 3;
+    }
+    
+    .credits{
+        margin-left: 1rem;
+        padding-left: 1rem;
+        border-left: 1.5px solid var(--sc);
+    }
     
 }
 
