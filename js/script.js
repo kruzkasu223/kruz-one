@@ -223,3 +223,123 @@ $(".skill-per").each(function(){
     var skillper = $(this).attr("per");
     $(this).css("width", skillper+"%");
 });
+
+
+
+
+// Contact Form
+
+$(function() {
+
+$("#name-error-message").hide();
+$("#email-error-message").hide();
+$("#msg-error-message").hide();
+
+var error_name = false;
+var error_email = false;
+var error_msg = false;
+
+
+$("#contact-name").focusout(function(){
+    check_name();
+});
+
+$("#contact-email").focusout(function() {
+    check_email();
+});
+
+$("#contact-msg").focusout(function() {
+    check_msg();
+});
+
+
+function check_name() {
+    var pattern = /^[a-zA-Z]*$/;
+    var name = $("#contact-name").val();
+    
+    if (pattern.test(name) && name !== '') {
+        $("#name-error-message").hide();
+        $("#contact-name").css("border","2px solid var(--pc)");
+    }
+    else if (name === ''){
+        $("#name-error-message").html("Name Can't be Empty.");
+        $("#name-error-message").show();
+        $("#contact-name").css("border","2px solid red");
+        error_name = true;
+    }
+    else{
+        $("#name-error-message").html("Enter Only Alphabets.");
+        $("#name-error-message").show();
+        $("#contact-name").css("border","2px solid red");
+        error_name = true;
+    }
+}
+
+
+function check_email() {
+    var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    var email = $("#contact-email").val();
+    
+    if (pattern.test(email) && email !== '') {
+        $("#email-error-message").hide();
+        $("#contact-email").css("border","2px solid var(--pc)");
+        
+    }
+    else if (email === ''){
+        $("#email-error-message").html("E-mail Can't be Empty.");
+        $("#email-error-message").show();
+        $("#contact-email").css("border","2px solid red");
+        error_email = true;
+    }
+    else{
+        $("#email-error-message").html("Enter Valid E-mail.");
+        $("#email-error-message").show();
+        $("#contact-email").css("border","2px solid red");
+        error_email = true;
+    }
+}
+
+
+function check_msg() {
+    var msg_length = $("#contact-msg").val().length;
+    var msg = $("#contact-msg").val();
+    
+    if (msg_length > 25) {
+        $("#msg-error-message").hide();
+        $("#contact-msg").css("border","2px solid var(--pc)");
+    }
+    else if (msg === ''){
+        $("#msg-error-message").html("Message Can't be Empty.");
+        $("#msg-error-message").show();
+        $("#contact-msg").css("border","2px solid red");
+        error_msg = true;
+    }
+    else{
+        $("#msg-error-message").html("Enter Atleast 25 Character.");
+        $("#msg-error-message").show();
+        $("#contact-msg").css("border","2px solid red");
+        error_msg = true;
+    }
+}
+
+
+$("#contact-form").submit(function() {
+    error_name = false;
+    error_email = false;
+    error_msg = false;
+    
+    check_name();
+    check_email();
+    check_msg();
+    
+    if (error_name === false && error_email === false && error_msg === false) {
+        $("#submit-error-message").hide();
+        return true;
+    }
+    else {
+        $("#submit-error-message").html("Please Enter All Field Correctly.");
+        return false;
+    }
+});
+
+});
