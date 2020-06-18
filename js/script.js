@@ -261,13 +261,13 @@ $(function() {
             $("#contact-name").css("border","2px solid var(--pc)");
         }
         else if (name === ''){
-            $("#name-error-message").html("Name Can't be Empty.");
+            $("#name-error-message").html("! Name Can't be Empty.");
             $("#name-error-message").show();
             $("#contact-name").css("border","2px solid red");
             error_name = true;
         }
         else{
-            $("#name-error-message").html("Enter Only Alphabets.");
+            $("#name-error-message").html("! Enter Only Alphabets.");
             $("#name-error-message").show();
             $("#contact-name").css("border","2px solid red");
             error_name = true;
@@ -285,13 +285,13 @@ $(function() {
             
         }
         else if (email === ''){
-            $("#email-error-message").html("E-mail Can't be Empty.");
+            $("#email-error-message").html("! E-mail Can't be Empty.");
             $("#email-error-message").show();
             $("#contact-email").css("border","2px solid red");
             error_email = true;
         }
         else{
-            $("#email-error-message").html("Enter Valid E-mail.");
+            $("#email-error-message").html("! Enter Valid E-mail.");
             $("#email-error-message").show();
             $("#contact-email").css("border","2px solid red");
             error_email = true;
@@ -308,13 +308,13 @@ $(function() {
             $("#contact-msg").css("border","2px solid var(--pc)");
         }
         else if (msg === ''){
-            $("#msg-error-message").html("Message Can't be Empty.");
+            $("#msg-error-message").html("! Message Can't be Empty.");
             $("#msg-error-message").show();
             $("#contact-msg").css("border","2px solid red");
             error_msg = true;
         }
         else{
-            $("#msg-error-message").html("Enter Atleast 40 Character.");
+            $("#msg-error-message").html("! Enter Atleast 40 Character.");
             $("#msg-error-message").show();
             $("#contact-msg").css("border","2px solid red");
             error_msg = true;
@@ -336,7 +336,7 @@ $(function() {
             return true;
         }
         else {
-            $("#submit-error-message").html("Please Enter All Field Correctly.");
+            $("#submit-error-message").html("Please Enter All Field Correctly!");
             return false;
         }
     });
