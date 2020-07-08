@@ -604,6 +604,7 @@ body{
     width: 100%;
     min-height: 30%;
     text-align: center;
+    margin: 1rem 0;
 }
 
 .port-des-p{
