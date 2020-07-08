@@ -604,7 +604,6 @@ body{
     width: 100%;
     min-height: 30%;
     text-align: center;
-    margin: 1rem 0;
 }
 
 .port-des-p{
@@ -914,6 +913,12 @@ body{
 
 
 /** Media Queries **/
+@media(max-width: 350px){
+    .port-des{
+        margin: 1rem 0;
+    }
+}
+
 
 @media (min-width: 700px){
     .container{
