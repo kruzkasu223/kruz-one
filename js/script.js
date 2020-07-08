@@ -214,17 +214,6 @@ $(window).on('scroll', function () {
 
 
 
-// Skillbars
-
-
-$(".skill-per").each(function(){
-    var skillper = $(this).attr("per");
-    $(this).css("width", skillper+"%");
-});
-
-
-
-
 // Contact Form
 
 
