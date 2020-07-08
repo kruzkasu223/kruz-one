@@ -190,26 +190,48 @@ $(function() {
 
 // Nav Active
 
-
-var sections = $('.container'),
-    nav = $('nav'),
-    nav_height = nav.outerHeight();
-
-$(window).on('scroll', function () {
-    var cur_pos = $(this).scrollTop();
+if($(window).height() > 900){
+    var sections = $('.container'),
+        nav = $('nav'),
+        nav_height = nav.outerHeight(),
+        dheight = $(window).height() * (30/100);
     
-    sections.each(function() {
-        var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();
-    
-    if (cur_pos >= top && cur_pos <= bottom) {
-        nav.find('a').removeClass('active');
-        sections.removeClass('active');
-      
-        nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-    }
-  });
-});
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+        
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height - dheight,
+            bottom = top + $(this).outerHeight();
+        
+        if (cur_pos >= top && cur_pos <= bottom) {
+            nav.find('a').removeClass('active');
+            sections.removeClass('active');
+          
+            nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+        }
+      });
+    });
+}else{
+    var sections = $('.container'),
+        nav = $('nav'),
+        nav_height = nav.outerHeight();
+        
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+        
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+        
+        if (cur_pos >= top && cur_pos <= bottom) {
+            nav.find('a').removeClass('active');
+            sections.removeClass('active');
+          
+            nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+        }
+      });
+    });
+}
 
 
 
