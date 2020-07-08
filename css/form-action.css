@@ -32,6 +32,11 @@
     padding: .5rem;
 }
 
+.cont-h1::selection{
+    background: none;
+    color: var(--pc);
+}
+
 .cont-p-c{
     font-size: 1rem;
     padding: .25rem;
