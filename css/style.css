@@ -593,6 +593,7 @@ body{
     color: var(--fc);
     font-size: 2rem;
     padding: .5rem;
+    text-align: center;
 }
 
 .port-name::selection{
